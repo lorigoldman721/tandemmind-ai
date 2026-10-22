@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#37462A">
+  <meta name="description" content="TandemMind AI Lab: Learn to Think with AI. A free four-session pilot for community professionals, November–December 2026.">
+  <title>TandemMind AI — Learn to Think with AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;450;500;550;600;650;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--olive:#37462A;--olive2:#59663A;--ink:#191916;--ivory:#FFFFF0;--berry:#6B294A;--oxide:#842E28;--gold:#967023;--muted:#625f55;--line:#d5d3c3}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ivory);color:var(--ink);font-family:Jost,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:18px;line-height:1.55}
+    a{color:inherit} a:focus-visible{outline:3px solid #d9ac5a;outline-offset:5px}
+    .container{width:min(1170px,calc(100% - 64px));margin:auto}
+    .skip{position:absolute;top:-100px;left:20px;background:white;padding:10px;z-index:10}.skip:focus{top:12px}
+    .hero{background:var(--olive);color:var(--ivory);min-height:760px;display:flex;flex-direction:column;position:relative;overflow:hidden}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:29px 0;gap:24px}
+    .brand{font-size:21px;letter-spacing:-.045em;font-weight:650;text-decoration:none;white-space:nowrap}
+    .brand span{color:#c9ad70}
+    .nav a.navlink{font-size:14px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid #a9b18c;padding-bottom:4px}
+    .hero-inner{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 170px;align-items:center;gap:40px;padding:80px 0 120px}
+    .eyebrow{font-size:13px;font-weight:650;letter-spacing:.15em;text-transform:uppercase}
+    .hero .eyebrow{color:#d8bf87}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(65px,9.3vw,144px);line-height:.96;font-weight:550;letter-spacing:-.075em;max-width:940px;margin:24px 0 36px}
+    h1 em{font-weight:400;font-style:normal;color:#d4b77f}
+    .hero-tagline{font-size:clamp(22px,2.7vw,33px);line-height:1.35;letter-spacing:-.025em;max-width:660px}
+    .hero-bottom{display:flex;align-items:center;gap:30px;margin-top:40px;flex-wrap:wrap}
+    .button{display:inline-flex;min-height:51px;align-items:center;justify-content:center;padding:13px 22px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid transparent;transition:transform .2s ease,background-color .2s ease}
+    .button:hover{transform:translateY(-2px)}
+    .button-light{background:var(--ivory);color:var(--olive)}
+    .button-dark{background:var(--olive);color:var(--ivory)}
+    .micro{font-size:14px;color:#d3d7c4}
+    .hero-aside{align-self:end;justify-self:end;writing-mode:vertical-rl;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#c1c9b0;padding-bottom:18px}
+    section{padding:120px 0}
+    .section-header{display:grid;grid-template-columns:270px 1fr;gap:65px;align-items:start}
+    .section-label{color:var(--berry);font-size:13px;letter-spacing:.15em;text-transform:uppercase;font-weight:650;padding-top:12px}
+    h2{font-size:clamp(38px,5vw,70px);line-height:1.09;letter-spacing:-.06em;font-weight:550;margin-bottom:30px}
+    .lead{font-size:clamp(20px,2.1vw,26px);line-height:1.45;max-width:750px;letter-spacing:-.018em}
+    .bodycopy{max-width:700px;color:#454439;font-size:18px}
+    .rule{border:0;border-top:1px solid var(--line);margin:40px 0}
+    .approach{background:#ecebdc}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:70px}
+    .step{border-top:3px solid var(--olive);padding-top:18px}
+    .step:nth-child(2){border-color:var(--berry)}.step:nth-child(3){border-color:var(--oxide)}
+    .step .num{display:block;font-size:13px;font-weight:650;color:var(--muted);margin-bottom:46px}
+    .step h3{font-size:25px;letter-spacing:-.035em;line-height:1.15;font-weight:600;margin-bottom:14px}
+    .step p{color:#47463c;font-size:17px}
+    .audience{background:var(--ivory)}
+    .audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:55px}
+    .audience-card{padding:36px;border:1px solid var(--line);min-height:260px}
+    .audience-card strong{display:block;font-size:12px;color:var(--berry);letter-spacing:.12em;text-transform:uppercase;margin-bottom:22px}
+    .audience-card h3{font-size:26px;font-weight:550;letter-spacing:-.035em}
+    .audience-card p{color:#545247;font-size:16px}
+    .pilot{background:var(--ink);color:var(--ivory)}
+    .pilot .section-label{color:#c5ad75}
+    .pilot h2{max-width:780px}
+    .pilot .lead{color:#e5e2d6}
+    .stats{display:flex;gap:70px;flex-wrap:wrap;margin-top:60px;margin-bottom:65px}
+    .stat-num{font-size:65px;font-weight:450;line-height:1;letter-spacing:-.06em;color:#d7bd86}
+    .stat-label{margin-top:10px;color:#d3d1c7;font-size:15px}
+    .session-list{border-top:1px solid #656459}
+    .session{display:grid;grid-template-columns:110px 1fr 160px;gap:20px;border-bottom:1px solid #656459;padding:27px 0;align-items:baseline}
+    .session-no{font-size:13px;color:#c9b784}
+    .session-title{font-size:22px;letter-spacing:-.025em}
+    .session-date{font-size:15px;color:#c7c5b7;text-align:right;white-space:nowrap}
+    .timing{margin-top:30px;color:#d2d0c4;font-size:16px}
+    .join{background:var(--ivory)}
+    .join-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,.56fr);gap:90px}
+    .join h2{max-width:650px}
+    .interest{background:#e9e7d7;padding:32px;align-self:center;border-top:4px solid var(--berry)}
+    .interest h3{font-size:24px;font-weight:550;letter-spacing:-.03em}
+    .interest p{font-size:16px;color:#545247}
+    .interest .pending{font-size:14px;font-weight:600;color:var(--berry);margin-bottom:0}
+    footer{background:var(--olive);color:var(--ivory);padding:40px 0}
+    .footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+    footer p{margin:0;font-size:14px;color:#ced4c0}
+    @media(max-width:900px){.section-header{grid-template-columns:1fr;gap:22px}.join-inner{grid-template-columns:1fr;gap:35px}.hero-inner{grid-template-columns:1fr}.hero-aside{display:none}.hero{min-height:690px}}
+    @media(max-width:640px){.container{width:min(100% - 38px,1170px)}.nav{padding:20px 0}.brand{font-size:20px}.hero{min-height:650px}.hero-inner{padding:65px 0 90px}h1{font-size:clamp(60px,15vw,98px)}section{padding:75px 0}.three,.audience-grid{grid-template-columns:1fr;gap:32px}.three{margin-top:44px}.step .num{margin-bottom:22px}.audience-card{min-height:auto;padding:26px}.stats{gap:32px;margin:42px 0}.stat-num{font-size:53px}.session{grid-template-columns:55px 1fr;gap:8px 16px}.session-date{grid-column:2;text-align:left}.hero-bottom{align-items:flex-start;flex-direction:column;gap:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="hero" id="top">
+  <div class="container">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top">TandemMind <span>AI</span></a>
+      <a class="navlink" href="#pilot">Explore the free pilot ↗</a>
+    </nav>
+  </div>
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">Human thinking × AI collaboration</div>
+      <h1>Learn to<br><em>Think</em> with AI.</h1>
+      <p class="hero-tagline">Anyone can learn to use AI.<br>I teach you how to think with it.</p>
+      <div class="hero-bottom">
+        <a class="button button-light" href="#pilot">Explore the pilot <span aria-hidden="true">&nbsp; ↗</span></a>
+        <span class="micro">A small-group experiment for community professionals</span>
+      </div>
+    </div>
+    <div class="hero-aside" aria-hidden="true">Curiosity / Context / Judgment / Possibility</div>
+  </div>
+</header>
+<main id="main">
+  <section id="philosophy">
+    <div class="container section-header">
+      <div class="section-label">01 / The idea</div>
+      <div>
+        <h2>AI should change how you approach a problem, not how fast you fix it.</h2>
+        <p class="lead">AI can be an active thinking partner, one that helps you examine assumptions, investigate unfamiliar territory, make connections, and see possibilities you might otherwise miss.</p>
+        <hr class="rule">
+        <p class="bodycopy">Collaborating with AI doesn't mean surrendering your judgment or critical thought. You bring the context, experience, curiosity, and responsibility. AI contributes questions, perspectives, and possibilities worth examining. The thinking happens together; the decisions remain yours.</p>
+      </div>
+    </div>
+  </section>
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">02 / The approach</div>
+        <div>
+          <h2>Start with a real problem.</h2>
+          <p class="lead">Not a list of prompts to memorize or a polished demo with an obvious answer. A real-life use case with uncertainty and complexity.</p>
+        </div>
+      </div>
+      <div class="three">
+        <article class="step">
+          <span class="num">01 — Recognize</span>
+          <h3>Find the opportunity.</h3>
+          <p>Identify a meaningful challenge and ask where working with AI might change your approach.</p>
+        </article>
+        <article class="step">
+          <span class="num">02 — Investigate</span>
+          <h3>Think it through together.</h3>
+          <p>Share context. Question assumptions. Look for missing information. Explore and test possible paths.</p>
+        </article>
+        <article class="step">
+          <span class="num">03 — Decide</span>
+          <h3>Use your judgment.</h3>
+          <p>Evaluate what AI offers, challenge weak reasoning, and make decisions you can explain and defend.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="audience" id="who">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">03 / Who it's for</div>
+        <div>
+          <h2>For community builders and managers.</h2>
+          <p class="lead">Especially when the systems behind those communities are anything but straightforward.</p>
+        </div>
+      </div>
+      <div class="audience-grid">
+        <article class="audience-card">
+          <strong>Primary focus</strong>
+          <h3>Working across disconnected tools?</h3>
+          <p>If your community runs through Slack, Discord, spreadsheets, or a collection of makeshift workflows, you know how much manual effort and ambiguity can hide between systems.</p>
+        </article>
+        <article class="audience-card">
+          <strong>Also welcome</strong>
+          <h3>Working inside a dedicated platform?</h3>
+          <p>Even with systems such as Higher Logic, Circle, or Gainsight, making sense of information, designing workflows, and solving unfamiliar problems still demand human judgment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="pilot" id="pilot">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">04 / The pilot</div>
+        <div>
+          <h2>One small cohort. Real use cases. Four conversations that build on each other.</h2>
+          <p class="lead">TandemMind AI Lab is a free proof-of-concept pilot for community professionals who want to experiment with a different way of working with AI.</p>
+          <div class="stats" aria-label="Pilot facts">
+            <div><div class="stat-num">10</div><div class="stat-label">Participants</div></div>
+            <div><div class="stat-num">4</div><div class="stat-label">Live sessions</div></div>
+            <div><div class="stat-num">60</div><div class="stat-label">Minutes each</div></div>
+          </div>
+          <div class="session-list" aria-label="Pilot session schedule">
+            <div class="session"><div class="session-no">SESSION 01</div><div class="session-title">The approach, illustrated by a real use case</div><div class="session-date">Thu, Nov 5</div></div>
+            <div class="session"><div class="session-no">SESSION 02</div><div class="session-title">A challenge chosen by the cohort</div><div class="session-date">Thu, Nov 12</div></div>
+            <div class="session"><div class="session-no">SESSION 03</div><div class="session-title">Another challenge, another way to think</div><div class="session-date">Thu, Nov 19</div></div>
+            <div class="session"><div class="session-no">SESSION 04</div><div class="session-title">Explore, reflect, and put the learning to work</div><div class="session-date">Thu, Dec 3</div></div>
+          </div>
+          <p class="timing"><strong>All sessions:</strong> 12:00–1:00 p.m. Mountain Time · 2026<br>Thanksgiving week off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="join" id="interest">
+    <div class="container join-inner">
+      <div>
+        <div class="section-label">05 / Join the experiment</div>
+        <h2>Bring a problem worth thinking about.</h2>
+        <p class="lead">I'll bring the opening use case and explain what we're doing and why. You bring questions and challenges from your work. Together, we'll decide which use cases to explore as a group.</p>
+        <p class="bodycopy">Before we begin, I'll ask about your goals and challenges. After the pilot, we'll reflect on what worked, what didn't, and what you'd want more of. The goal is to learn whether this approach changes how people think and work with AI.</p>
+      </div>
+      <aside class="interest" aria-label="Registration status">
+        <div class="eyebrow" style="color:var(--berry);margin-bottom:17px">Free pilot · 10 places</div>
+        <h3>Interested in joining?</h3>
+        <p>Registration details are coming soon. The pilot is designed for a small cohort of community professionals.</p>
+        <!-- REGISTRATION: When ready, replace the paragraph above with an <a class="button button-dark" href="YOUR_FORM_URL">Express interest ↗</a> link. -->
+        <p class="pending">Interest form coming soon ↗</p>
+      </aside>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <a class="brand" href="#top">TandemMind <span>AI</span></a>
+    <p>Human judgment stays in the driver's seat.</p>
+    <p>© 2026 TandemMind AI</p>
+  </div>
+</footer>
+</body>
+</html>
