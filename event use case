@@ -1,0 +1,78 @@
+# Event Technical Troubleshooting — Emerging Requirements
+
+**Status:** Discovery / Not Validated
+
+These requirements and design ideas emerged while exploring the
+Real-Time Technical Troubleshooting for Community Events use case.
+
+They are hypotheses to investigate, not approved product requirements.
+
+Related use case:
+../use-cases/event-technical-troubleshooting.md
+Experience Stages
+
+Pre-event readiness
+Live-event assistance
+Troubleshooting
+Escalation
+Event continuity
+Post-incident learning
+
+Troubleshooting Model
+
+Level 0: Prevention
+Level 1: Known issue
+Level 2: Diagnostic
+Level 3: Live human support
+Level 4: Resolution + learning
+
+Bot Intervention / Permissions
+
+Observe
+Guide
+Offer to act
+Act with approval
+Auto-remediate pre-authorized low-risk/reversible issues
+Escalate
+Never-act categories
+
+Knowledge Requirements
+
+Source provenance
+Freshness/version
+Authority
+Confidence
+Conflicting-source handling
+Documentation-gap detection
+
+Human Handoff
+
+Ping live support
+Preserve context
+Send symptoms + environment + attempted fixes + results + sources
+Don't make the host repeat everything
+
+Continuity
+
+Help the host keep the event running while the underlying problem is unresolved.
+
+Closed-Loop Learning
+
+Capture human resolution
+Identify missing/stale/wrong docs
+Route for validation
+Update knowledge
+Make validated solution retrievable next time
+
+And add Open Questions. That's important. For example:
+
+Can the bot actually execute platform actions through available APIs?
+
+We don't know. Therefore it belongs under Open Questions, not Requirements.
+
+This gives us a really clean separation:
+
+use-cases/ = Why should we solve this?
+requirements/ = What might a solution need to do?
+Later, experiments/ = What did we test and learn?
+Eventually, assets/ = What survived validation and is ready for people to use?
